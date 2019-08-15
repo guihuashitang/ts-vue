@@ -99,4 +99,5 @@ export default class ScrollPane extends Vue {
     position: absolute;
   }
 }
+
 </style>
