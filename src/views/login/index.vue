@@ -43,8 +43,8 @@ const validatePassword = (rule: any, value: any, callback: any) => {
 };
 @Component
 export default class Login extends Vue {
-  private loginForm: any = {username: '', password: ''};
-  private loginRules: any =  {
+  private loginForm: object = {username: '', password: ''};
+  private loginRules: object =  {
     username: [{ required: true, trigger: 'blur', validator: validateUsername }],
     password: [{ required: true, trigger: 'blur', validator: validatePassword }],
   };
