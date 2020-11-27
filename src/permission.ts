@@ -1,4 +1,5 @@
 import router from './router'
+import { Route } from 'vue-router'
 import store from '@/store'
 import { Message } from 'element-ui'
 import NProgress from 'nprogress' // progress bar
@@ -24,7 +25,7 @@ function hasPermission(roles:any, permissionRoles:any) {
 
 const whiteList = ['/login', '/authredirect', '/401', '/404']// no redirect whitelist
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to: Route, from: Route, next: any) => {
   NProgress.start() // start progress bar
   if (getToken()) { // determine if there has token
     /* has token*/
